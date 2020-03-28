@@ -2,6 +2,7 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator, HeaderBackButton } from '@react-navigation/stack'
 import About from '../screens/AboutScreen'
+import Header from '../components/Header'
 
 const Stack = createStackNavigator()
 
@@ -11,9 +12,11 @@ export default Navigator = () => {
         <Stack.Screen 
             name='About' 
             component={About} 
-            options={{
-                title: 'About us',
-                headerStyle: {backgroundColor: '#eeeeee'}
+            options={({navigation}) => {
+                return {
+                    headerTitle: () => <Header navigation={navigation} title='About us' />,
+                    headerStyle: {backgroundColor: '#eeeeee'}
+                }
             }} 
         />
       </Stack.Navigator>

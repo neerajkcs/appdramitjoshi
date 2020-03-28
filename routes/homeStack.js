@@ -11,9 +11,11 @@ export default Navigator = () => {
         <Stack.Screen 
             name='Home' 
             component={Home} 
-            options={{
-                headerTitle: () => <Header/>,
-                headerStyle: {backgroundColor: '#eeeeee'}
+            options={({navigation}) => {
+                return {
+                    headerTitle: () => <Header navigation={navigation} title='Welcome to Dr. Amit Joshi' />,
+                    headerStyle: {backgroundColor: '#eeeeee'}
+                }
             }} 
         />
       </Stack.Navigator>

@@ -3,7 +3,6 @@
     "name": "Dr. Amit Joshi",
     "slug": "appdramitjoshi",
     "privacy": "public",
-    "sdkVersion": "36.0.0",
     "platforms": [
       "ios",
       "android",
