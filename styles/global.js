@@ -7,7 +7,8 @@ export const globalStyles = StyleSheet.create({
     titleText: {
         fontFamily: 'quicksand-bold',
         fontSize: 22,
-        color: '#333'
+        color: '#333',
+        width: '100%'
     },
     paragraph: {
         marginVertical: 8,

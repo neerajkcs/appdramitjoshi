@@ -3,13 +3,23 @@ import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 import {globalStyles} from '../styles/global';
-
+import {HomeSlider} from '../components/HomeSlider';
 import { MonoText } from '../components/StyledText';
+
+const images = [
+  "../assets/images/slides/slide05_0.png",
+  "../assets/images/slides/slide01.png",
+  "../assets/images/slides/slide03_0.png",
+  "../assets/images/slides/slide04.png"
+];
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+        <View style={styles.sliderContainer}>
+          <HomeSlider images={images} style={styles.slider} />
+        </View>
         <View style={styles.welcomeContainer}>
           <Image
             source={require('../assets/images/dramitjoshi.png')}
@@ -19,7 +29,7 @@ export default function HomeScreen() {
 
         <View style={styles.getStartedContainer}>
           <Text style={globalStyles.titleText}>Dr. Amit Joshi</Text>
-          <Text style={globalStyles.paragraph}>Life Member-Council Of Sex Education Parenthood International,  Life Member- Indian Association for Sexology, providing the right sex education among all Indians.</Text>
+          <Text style={globalStyles.paragraph}>Life Member - Council Of Sex Education Parenthood International and Indian Association for Sexology, providing the right sex education among all Indians.</Text>
           <DevelopmentModeNotice />
         </View>
       </ScrollView>
@@ -67,7 +77,17 @@ function handleHelpPress() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#F7F6F1',
+  },
+  sliderContainer: {
+    backgroundColor: '#2ECC71',
+    width: '100%',
+    height: 200
+  },
+  slider: {
+    width: 200,
+    height: 200,
+    backgroundColor: '#ff0000'
   },
   developmentModeText: {
     marginBottom: 20,
@@ -77,7 +97,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   contentContainer: {
-    paddingTop: 30,
+    paddingTop: 0,
   },
   welcomeContainer: {
     alignItems: 'center',

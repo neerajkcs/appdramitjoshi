@@ -6,18 +6,31 @@ import Header from '../components/Header'
 
 const Stack = createStackNavigator()
 
-export default Navigator = () => {
+export default Navigator = ({navigation}) => {
   return (
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{
+        headerStyle: {
+            backgroundColor: '#2ECC71',
+            shadowOpacity: 0,
+            borderBottomWidth: 0,
+        },
+        headerTintColor: '#ffffff',
+        headerTitleStyle: {
+            fontFamily: 'quicksand-bold',
+            fontSize: 20,
+            color: '#fff',
+            letterSpacing: 0.5
+        }
+      }}>
         <Stack.Screen 
             name='About' 
             component={About} 
-            options={({navigation}) => {
-                return {
-                    headerTitle: () => <Header navigation={navigation} title='About us' />,
-                    headerStyle: {backgroundColor: '#eeeeee'}
-                }
-            }} 
+            options={{
+                title: 'About',
+                headerLeft: () => (
+                    <Header navigation={navigation} />
+                )
+            }}
         />
       </Stack.Navigator>
   )
