@@ -10,7 +10,7 @@ export default Navigator = ({navigation}) => {
   return (
       <Stack.Navigator screenOptions={{
         headerStyle: {
-            backgroundColor: '#2ECC71',
+            backgroundColor: '#1b90da',
             shadowOpacity: 0,
             borderBottomWidth: 0,
         },

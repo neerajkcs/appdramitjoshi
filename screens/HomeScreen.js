@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Platform, Dimensions, StyleSheet, Text, TouchableOpacity, View, ImageBackground } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 import {globalStyles} from '../styles/global';
@@ -21,15 +21,101 @@ export default function HomeScreen() {
           <HomeSlider images={images} style={styles.slider} />
         </View>
         <View style={styles.welcomeContainer}>
-          <Image
-            source={require('../assets/images/dramitjoshi.png')}
-            style={styles.welcomeImage}
-          />
+          <Text style={[globalStyles.titleText,styles.welcomeTitle]}>We can help you cure:</Text>
         </View>
-
+        <View style={styles.homeTopicsList}>
+          <ImageBackground
+            style={styles.homeTopicItem}
+            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            imageStyle={{resizeMode: 'cover',borderRadius: 6}}
+          >
+            <View style={styles.homeTopicItemWrapText}>
+              <Text style={styles.homeTopicItemText}>Erectile dysfunction</Text>
+            </View>
+          </ImageBackground>
+          <ImageBackground
+            style={styles.homeTopicItem}
+            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            imageStyle={{resizeMode: 'cover',borderRadius: 6}}
+          >
+            <View style={styles.homeTopicItemWrapText}>
+              <Text style={styles.homeTopicItemText}>Penis disorder</Text>
+            </View>
+          </ImageBackground>
+          <ImageBackground
+            style={styles.homeTopicItem}
+            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            imageStyle={{resizeMode: 'cover',borderRadius: 6}}
+          >
+            <View style={styles.homeTopicItemWrapText}>
+              <Text style={styles.homeTopicItemText}>Premature ejaculation</Text>
+            </View>
+          </ImageBackground>
+          <ImageBackground
+            style={styles.homeTopicItem}
+            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            imageStyle={{resizeMode: 'cover',borderRadius: 6}}
+          >
+            <View style={styles.homeTopicItemWrapText}>
+              <Text style={styles.homeTopicItemText}>Sexual health</Text>
+            </View>
+          </ImageBackground>
+          <ImageBackground
+            style={styles.homeTopicItem}
+            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            imageStyle={{resizeMode: 'cover',borderRadius: 6}}
+          >
+            <View style={styles.homeTopicItemWrapText}>
+              <Text style={styles.homeTopicItemText}>Testicular disorder</Text>
+            </View>
+          </ImageBackground>
+          <ImageBackground
+            style={styles.homeTopicItem}
+            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            imageStyle={{resizeMode: 'cover',borderRadius: 6}}
+          >
+            <View style={styles.homeTopicItemWrapText}>
+              <Text style={styles.homeTopicItemText}>Male reproductive system</Text>
+            </View>
+          </ImageBackground>
+          <ImageBackground
+            style={styles.homeTopicItem}
+            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            imageStyle={{resizeMode: 'cover',borderRadius: 6}}
+          >
+            <View style={styles.homeTopicItemWrapText}>
+              <Text style={styles.homeTopicItemText}>Shockwave therapy</Text>
+            </View>
+          </ImageBackground>
+          <ImageBackground
+            style={styles.homeTopicItem}
+            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            imageStyle={{resizeMode: 'cover',borderRadius: 6}}
+          >
+            <View style={styles.homeTopicItemWrapText}>
+              <Text style={styles.homeTopicItemText}>STD</Text>
+            </View>
+          </ImageBackground>
+          <ImageBackground
+            style={styles.homeTopicItem}
+            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            imageStyle={{resizeMode: 'cover',borderRadius: 6}}
+          >
+            <View style={styles.homeTopicItemWrapText}>
+              <Text style={styles.homeTopicItemText}>Female reproductive system</Text>
+            </View>
+          </ImageBackground>
+          <ImageBackground
+            style={styles.homeTopicItem}
+            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            imageStyle={{resizeMode: 'cover',borderRadius: 6}}
+          >
+            <View style={styles.homeTopicItemWrapText}>
+              <Text style={styles.homeTopicItemText}>What is sex theraphy?</Text>
+            </View>
+          </ImageBackground>
+        </View>
         <View style={styles.getStartedContainer}>
-          <Text style={globalStyles.titleText}>Dr. Amit Joshi</Text>
-          <Text style={globalStyles.paragraph}>Life Member - Council Of Sex Education Parenthood International and Indian Association for Sexology, providing the right sex education among all Indians.</Text>
           <DevelopmentModeNotice />
         </View>
       </ScrollView>
@@ -80,7 +166,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F7F6F1',
   },
   sliderContainer: {
-    backgroundColor: '#2ECC71',
+    backgroundColor: '#1b90da',
     width: '100%',
     height: 200
   },
@@ -101,8 +187,13 @@ const styles = StyleSheet.create({
   },
   welcomeContainer: {
     alignItems: 'center',
+    justifyContent: 'center',
     marginTop: 10,
     marginBottom: 20,
+  },
+  welcomeTitle: {
+    textAlign: 'center',
+    paddingTop: 10
   },
   welcomeImage: {
     width: 150,
@@ -114,12 +205,43 @@ const styles = StyleSheet.create({
   getStartedContainer: {
     alignItems: 'center',
     marginHorizontal: 16,
+    
   },
   getStartedText: {
     fontSize: 17,
     color: 'rgba(96,100,109, 1)',
     lineHeight: 24,
     textAlign: 'center',
-    fontFamily: 'quicksand-regular'
+    fontFamily: 'quicksand-regular',
+    
+  },
+  homeTopicsList: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    padding: 16,
+    paddingTop: 0,
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  homeTopicItem:{
+    width: (Dimensions.get('window').width - 50) / 2,
+    height: 134,
+    borderRadius: 6,
+    marginBottom: 17
+  },
+  homeTopicItemWrapText: {
+    backgroundColor: 'rgba(229, 45, 95,0.5)',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 6,
+    padding: 5
+  },
+  homeTopicItemText:{
+    fontFamily: 'quicksand-bold',
+    color: '#ffffff',
+    fontSize: 20,
+    textAlign: 'center'
   },
 });

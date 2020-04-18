@@ -13,7 +13,7 @@ function MainTabScreen() {
       initialRouteName="Home"
       activeColor="#ffffff"
       inactiveColor="#ddd"
-      barStyle={{ backgroundColor: '#2ECC71' }}
+      barStyle={{ backgroundColor: '#1b90da' }}
     >
       <Tab.Screen
         name="Home"
@@ -21,7 +21,7 @@ function MainTabScreen() {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="home" color={color} size={26} />
+            <MaterialCommunityIcons name="home-outline" color={color} size={26} />
           ),
         }}
       />

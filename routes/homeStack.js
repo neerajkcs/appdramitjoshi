@@ -8,7 +8,7 @@ export default Navigator = ({navigation}) => {
   return (
       <Stack.Navigator screenOptions={{
         headerStyle: {
-            backgroundColor: '#2ECC71',
+            backgroundColor: '#1b90da',
             shadowOpacity: 0,
             borderBottomWidth: 0,
         },
@@ -33,7 +33,7 @@ export default Navigator = ({navigation}) => {
                 return {
                     headerTitle: () => <Header navigation={navigation} title='Welcome to Dr. Amit Joshi' />,
                     headerStyle: {
-                        backgroundColor: '#2ECC71',
+                        backgroundColor: '#1b90da',
                         shadowOpacity: 0,
                         borderBottomWidth: 0,
                     }
