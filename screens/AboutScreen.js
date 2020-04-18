@@ -2,6 +2,7 @@ import * as React from 'react';
 import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import {globalStyles} from '../styles/global';
+import HTMLView from 'react-native-htmlview';
 import { render } from 'react-dom';
 
 export default class AboutScreen extends React.Component {
@@ -38,10 +39,14 @@ export default class AboutScreen extends React.Component {
     }
     return (
       <View style={styles.container}>
+        
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.getStartedContainer}>
-            <Text style={globalStyles.titleText}>{this.state.dataSource.title}</Text>
-            <Text style={globalStyles.paragraph}>{this.state.dataSource.body.value}</Text>
+          <Text style={globalStyles.titleText}>{this.state.dataSource.title}</Text>
+          <HTMLView
+            value={this.state.dataSource.body.value}
+            stylesheet={htmlstyles}
+          />
           </View>
         </ScrollView>
       </View>
@@ -53,7 +58,21 @@ AboutScreen.navigationOptions = {
   header: null,
 };
 
-
+const htmlstyles = StyleSheet.create({
+  p: {
+    marginVertical: -25,
+    lineHeight: 20,
+    fontSize: 16,
+    color: '#333333',
+    fontFamily: 'quicksand-regular',
+  },
+  b: {
+    fontFamily: 'quicksand-bold',
+  },
+  strong: {
+    fontFamily: 'quicksand-bold',
+  }
+});
 
 const styles = StyleSheet.create({
   container: {
