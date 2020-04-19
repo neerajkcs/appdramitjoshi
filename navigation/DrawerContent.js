@@ -82,6 +82,17 @@ export function DrawerContent(props) {
                             label="About"
                             onPress={() => {props.navigation.navigate('About')}}
                         />
+                        <DrawerItem
+                            icon={({color, size}) => (
+                                <Icon 
+                                    name="information-outline"
+                                    color={color}
+                                    size={size}
+                                />
+                            )}
+                            label="Erectile dysfunction"
+                            onPress={() => {props.navigation.navigate('EDScreen')}}
+                        />
                     </Drawer.Section>
                 </View>
             </DrawerContentScrollView>

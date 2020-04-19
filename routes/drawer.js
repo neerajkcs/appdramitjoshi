@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { DrawerContent } from '../navigation/DrawerContent';
 import Home from './homeStack'
 import About from './aboutStack'
+import EDScreen from '../screens/topics/ErectileDysfunction';
 import MainTabScreen from './MainTabScreen'
 
 
@@ -15,6 +16,7 @@ export default function App() {
     <NavigationContainer>
       <Drawer.Navigator drawerContent={props => <DrawerContent { ...props} />}>
         <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
+        <Drawer.Screen name="EDScreen" component={EDScreen} />
         <Drawer.Screen name="About" component={About} />
       </Drawer.Navigator>
     </NavigationContainer>

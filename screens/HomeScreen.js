@@ -13,7 +13,7 @@ const images = [
   "../assets/images/slides/slide04.png"
 ];
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
@@ -24,18 +24,21 @@ export default function HomeScreen() {
           <Text style={[globalStyles.titleText,styles.welcomeTitle]}>We can help you cure:</Text>
         </View>
         <View style={styles.homeTopicsList}>
+          <TouchableOpacity onPress={() => navigation.navigate('EDScreen')}>
+            <ImageBackground
+              style={styles.homeTopicItem}
+              //source={{uri: 'https://lh3.googleusercontent.com/9RNYdavEwRu0b0roKgIQLo3Q_X_cSV_VmeQkr_88_9e2LP1YYhwOc0aBkKzP3Zl-GK8TX8KqnG_ryD-iwTfkRjeXegsa02lISH1YpYt7LSRGzSNW3lM15hK00pw5HIr0ZvqO41yP1w=w360-h240-no'}}
+              source={require('../assets/images/topics/ed.jpg')}
+              imageStyle={{resizeMode: 'cover',borderRadius: 6}}
+            >
+                <View style={styles.homeTopicItemWrapText}>
+                  <Text style={styles.homeTopicItemText}>Erectile dysfunction</Text>
+                </View>
+            </ImageBackground>
+          </TouchableOpacity>
           <ImageBackground
             style={styles.homeTopicItem}
-            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
-            imageStyle={{resizeMode: 'cover',borderRadius: 6}}
-          >
-            <View style={styles.homeTopicItemWrapText}>
-              <Text style={styles.homeTopicItemText}>Erectile dysfunction</Text>
-            </View>
-          </ImageBackground>
-          <ImageBackground
-            style={styles.homeTopicItem}
-            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            source={require('../assets/images/topics/pd.jpg')}
             imageStyle={{resizeMode: 'cover',borderRadius: 6}}
           >
             <View style={styles.homeTopicItemWrapText}>
@@ -44,7 +47,7 @@ export default function HomeScreen() {
           </ImageBackground>
           <ImageBackground
             style={styles.homeTopicItem}
-            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            source={require('../assets/images/topics/preejc.jpg')}
             imageStyle={{resizeMode: 'cover',borderRadius: 6}}
           >
             <View style={styles.homeTopicItemWrapText}>
@@ -53,7 +56,7 @@ export default function HomeScreen() {
           </ImageBackground>
           <ImageBackground
             style={styles.homeTopicItem}
-            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            source={require('../assets/images/topics/shealth.jpg')}
             imageStyle={{resizeMode: 'cover',borderRadius: 6}}
           >
             <View style={styles.homeTopicItemWrapText}>
@@ -62,7 +65,7 @@ export default function HomeScreen() {
           </ImageBackground>
           <ImageBackground
             style={styles.homeTopicItem}
-            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            source={require('../assets/images/topics/test-dis.jpg')}
             imageStyle={{resizeMode: 'cover',borderRadius: 6}}
           >
             <View style={styles.homeTopicItemWrapText}>
@@ -71,7 +74,7 @@ export default function HomeScreen() {
           </ImageBackground>
           <ImageBackground
             style={styles.homeTopicItem}
-            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            source={require('../assets/images/topics/mreprodsys.jpg')}
             imageStyle={{resizeMode: 'cover',borderRadius: 6}}
           >
             <View style={styles.homeTopicItemWrapText}>
@@ -80,7 +83,7 @@ export default function HomeScreen() {
           </ImageBackground>
           <ImageBackground
             style={styles.homeTopicItem}
-            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            source={require('../assets/images/topics/shockwave2.jpg')}
             imageStyle={{resizeMode: 'cover',borderRadius: 6}}
           >
             <View style={styles.homeTopicItemWrapText}>
@@ -89,7 +92,7 @@ export default function HomeScreen() {
           </ImageBackground>
           <ImageBackground
             style={styles.homeTopicItem}
-            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            source={require('../assets/images/topics/std.jpg')}
             imageStyle={{resizeMode: 'cover',borderRadius: 6}}
           >
             <View style={styles.homeTopicItemWrapText}>
@@ -98,7 +101,7 @@ export default function HomeScreen() {
           </ImageBackground>
           <ImageBackground
             style={styles.homeTopicItem}
-            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            source={require('../assets/images/topics/freprodsys.jpg')}
             imageStyle={{resizeMode: 'cover',borderRadius: 6}}
           >
             <View style={styles.homeTopicItemWrapText}>
@@ -107,7 +110,7 @@ export default function HomeScreen() {
           </ImageBackground>
           <ImageBackground
             style={styles.homeTopicItem}
-            source={{uri: 'https://images.pexels.com/photos/89432/pexels-photo-89432.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb'}}
+            source={require('../assets/images/topics/stherapy.jpg')}
             imageStyle={{resizeMode: 'cover',borderRadius: 6}}
           >
             <View style={styles.homeTopicItemWrapText}>

@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import {globalStyles} from '../styles/global';
+import {globalStyles} from '../../styles/global';
 import HTMLView from 'react-native-htmlview';
 import { render } from 'react-dom';
 
-export default class AboutScreen extends React.Component {
+export default class ErectileDysfunctionScreen extends React.Component {
   constructor(props) {
     super(props)
     this.state =  { 
@@ -13,7 +13,7 @@ export default class AboutScreen extends React.Component {
     }
   }
   componentDidMount(){
-    return fetch('https://www.dramitjoshi.com/node/16.json')
+    return fetch('https://www.dramitjoshi.com/node/7.json')
       .then((response) => response.json())
       .then((responseJson) => {
 
@@ -55,7 +55,7 @@ export default class AboutScreen extends React.Component {
   }
 }
 
-AboutScreen.navigationOptions = {
+ErectileDysfunctionScreen.navigationOptions = {
   header: null,
 };
 

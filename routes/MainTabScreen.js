@@ -4,6 +4,7 @@ import { MaterialCommunityIcons } from 'react-native-vector-icons';
 
 import Home from './homeStack'
 import About from './aboutStack'
+import EDScreen from './erectileDysfunctionStack'
 
 const Tab = createMaterialBottomTabNavigator();
 
